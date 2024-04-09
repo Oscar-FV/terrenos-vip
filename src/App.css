@@ -12,7 +12,6 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: sans-serif;
     outline: 10px solid hotpink;
     /* turn above on to see the edge of panels */
   }

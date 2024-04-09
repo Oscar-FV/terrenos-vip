@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="">
         <div ref={(ref) => (panelRefs.current[0] = ref!)} data-color="white" data-text="black" className="panel">
           <div>
             <h1>Magic scrolling colours</h1>
