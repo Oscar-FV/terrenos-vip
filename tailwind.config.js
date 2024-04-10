@@ -5,15 +5,25 @@ export default {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    colors: {
-      'primary': '#2E9BF8',
-      'secondary': '#003764',
-      'accent': '#B48724'
+    screens:{
+      'sm': '639px',
+      'md': '769px',
+      'lg': '1025px',
+      'xl': '1281px',
+      '2xl': '1537px' 
     },
     fontFamily: {
       sans: ['Montserrat', 'sans-serif']
     },
-    extend: {},
+    extend: {
+      colors: {
+        'primary': '#2E9BF8',
+        'secondary': '#003764',
+        'accent': '#E7BA57'
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 }
