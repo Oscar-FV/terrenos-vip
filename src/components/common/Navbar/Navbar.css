@@ -1,0 +1,17 @@
+.navItem {
+    @apply relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-secondary after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center;
+}
+
+.nav-closed{
+    max-height: 0;
+    overflow: hidden;
+    transition: all .1s ease-out, opacity .1s linear;
+    opacity: 0;
+}
+
+.nav-open{
+    max-height: 100vh;
+    overflow: auto;
+    transition: all .3s ease-in, opacity .3s linear;
+    opacity: 1;
+}
