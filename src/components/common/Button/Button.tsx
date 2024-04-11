@@ -29,18 +29,17 @@ const Button = ({ size = "base", text, type }: Props) => {
     }
 
     switch (type) {
-        case ("unveil"):
+        case ("button-arrow"):
             return (
-                <a
-                    href=""
-                    className={`group relative inline-block font-mono ${buttonClass}`}
-                >
-                    <span className="relative z-10 block overflow-hidden rounded-lg border border-secondary px-5 py-3 font-medium leading-tight text-secondary transition-colors duration-300 ease-out group-hover:border-transparent group-hover:text-white">
-                        <span className="absolute inset-0 h-full w-full rounded-lg bg-white px-5 py-3"></span>
-                        <span className="ease absolute left-0 -ml-2 h-48 w-48 origin-top-right -translate-x-full translate-y-12 -rotate-90 bg-gradient-to-br from-primary to-secondary transition-all duration-300 group-hover:-rotate-180"></span>
-                        <span className="relative">{text}</span>
+                <a href="#_" className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden text-secondary transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-[#f4f4f4] group">
+                    <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-primary group-hover:h-full"></span>
+                    <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+                        <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </span>
-                    <span className="absolute bottom-0 right-0 -mb-1 -mr-1 h-12 w-full rounded-lg bg-secondary transition-all duration-200 ease-linear group-hover:mb-0 group-hover:mr-0 group-hover:bg-transparent" data-rounded="rounded-lg"></span>
+                    <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                        <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </span>
+                    <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">{text}</span>
                 </a>
             );
         default:
