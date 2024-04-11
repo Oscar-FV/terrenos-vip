@@ -26,11 +26,11 @@ const Navbar = () => {
 
     return (
         <>
-            <nav ref={navRef} className="bg-white border-gray-200 shadow-sm sticky top-0 z-50 lg:px-4 lg:py-0 2xl:p-0">
+            <nav ref={navRef} className="bg-white border-gray-200 shadow-sm fixed w-full top-0 z-50 lg:px-12 lg:py-2 2xl:p-0">
                 <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto py-4 px-4 lg:p-4">
                     <a href="" className="flex items-center space-x-3 pl-4">
                         <img src="/images/logo.webp" className="h-8" alt="terrenos VIP ciudad maderas" />
-                        <span className="self-center sm:text-3xl font-semibold whitespace-nowrap text-accent h-7">TERRENOS <span className="text-primary">VIP</span></span>
+                        <span className="sm:text-3xl font-semibold whitespace-nowrap text-accent h-7">TERRENOS <span className="text-primary">VIP</span></span>
                     </a>
                     <span className="lg:hidden">
                         <Hamburger toggled={isOpen} toggle={setOpen} size={20} color="#003764"/>

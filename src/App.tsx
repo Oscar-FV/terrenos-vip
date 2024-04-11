@@ -4,6 +4,7 @@ import usePanelColor from './hooks/usePanelColor';
 
 import './App.css'
 import Navbar from './components/common/Navbar/Navbar';
+import HeroSection from './components/HeroSection/HeroSection';
 
 function App() {
   const scrollPosition = useScrollPosition();
@@ -16,7 +17,7 @@ function App() {
   return (
     <>
       <Navbar />
-      
+      <HeroSection />
     </>
   );
 };

@@ -1,0 +1,11 @@
+.hero-tittle { 
+    font-size: 4rem;
+    line-height: 1;
+}
+
+hr{
+    height:80px !important;
+    width:2px;
+    border-width:0;
+    @apply bg-primary mr-10
+   }
