@@ -7,7 +7,7 @@ export default {
   theme: {
     screens:{
       'sm': '639px',
-      'md': '769px',
+      'md': '771px',
       'lg': '1025px',
       'xl': '1281px',
       '2xl': '1537px' 
@@ -20,7 +20,7 @@ export default {
         'primary': '#2E9BF8',
         'secondary': '#003764',
         'accent': '#E7BA57'
-      },
+      }
     },
   },
   plugins: [
