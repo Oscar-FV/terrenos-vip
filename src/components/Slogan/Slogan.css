@@ -1,0 +1,7 @@
+@tailwind utilities;
+
+@layer utilities {
+    .slogan-text{
+        font-size: clamp(3rem, 7vw, 9.4rem);
+    }
+}
