@@ -26,8 +26,8 @@ const Navbar = () => {
 
     return (
         <>
-            <nav ref={navRef} className="bg-white border-gray-200 shadow-sm fixed w-full top-0 z-50 lg:px-12 lg:py-2">
-                <div className="max-w-screen-2xl flex flex-wrap items-center justify-between py-4 px-4 lg:p-4">
+            <nav ref={navRef} className="bg-white border-gray-200 shadow-sm fixed w-full top-0 z-50 md:px-12 lg:py-2">
+                <div className="flex flex-wrap items-center justify-between py-4 px-4 lg:p-4">
                     <a href="" className="flex items-center space-x-3 pl-4">
                         <img src="/images/logo.webp" className="h-8" alt="terrenos VIP ciudad maderas" />
                         <span className="sm:text-3xl text-xl font-semibold whitespace-nowrap text-accent md:h-7">TERRENOS <span className="text-primary">VIP</span></span>

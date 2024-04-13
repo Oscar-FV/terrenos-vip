@@ -1,20 +1,28 @@
 @tailwind utilities;
 
-hr{
-    height:80px !important;
-    width:2px;
-    border-width:0;
+hr {
+    height: 80px !important;
+    width: 2px;
+    border-width: 0;
     @apply bg-primary/30 mr-10
 }
 
-@layer utilities{
-    .hero-tittle{
+@layer utilities {
+    .hero-tittle {
         font-size: clamp(1.5rem, 4.9vw, 4.5rem);
         line-height: 1;
     }
 
-    .hero-tittle-mobile{
+    .hero-tittle-mobile {
         font-size: clamp(3rem, 1vw, 8rem);
         line-height: 1;
+    }
+
+    .font-outline-2 {
+        -webkit-text-stroke: 0.05px black;
+    }
+
+    .font-outline-none {
+        -webkit-text-stroke: 0px;
     }
 }
