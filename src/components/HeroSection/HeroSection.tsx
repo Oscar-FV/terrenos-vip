@@ -27,10 +27,7 @@ const HeroSection = forwardRef<HTMLDivElement, Props>(({color, text}, ref) => {
                         <p className="xl:text-2xl text-2xl text-white md:text-secondary font-outline-2 md:font-outline-none">Tu elección para un futuro financiero sólido.</p>
                     </div>
                     <div className="w-full mt-5 flex md:flex-none md:justify-start justify-center">
-                    <Button type="button-arrow" text="Conoce Más"/>
-                    </div>
-                    <div className="w-full mt-5">
-                    <Button type="button-arrow" text="Conoce Más"/>
+                        <Button type="button-arrow" text="Conoce Más"/>
                     </div>
                 </div>
                 
