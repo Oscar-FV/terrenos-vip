@@ -16,13 +16,13 @@
         flex: 1 1 auto;
         max-width: calc((100% / 3) - 1rem);
         opacity: 0.8;
-        transition: border-color 0.3s ease, opacity 0.1s ease, opacity 0.3s ease;
+        transition: border-color 0.3s ease, opacity 0.1s ease;
         @apply border-4 border-transparent shadow-sm;
     }
 
-    .slides>input:nth-of-type(1):checked~.slide-thumbnails li:nth-of-type(1),
-    .slides>input:nth-of-type(2):checked~.slide-thumbnails li:nth-of-type(2),
-    .slides>input:nth-of-type(3):checked~.slide-thumbnails li:nth-of-type(3) {
+    .carousel>input:nth-of-type(1):checked~.slides .slide-thumbnails li:nth-of-type(1),
+    .carousel>input:nth-of-type(2):checked~.slides .slide-thumbnails li:nth-of-type(2),
+    .carousel>input:nth-of-type(3):checked~.slides .slide-thumbnails li:nth-of-type(3) {
         opacity: 1;
         @apply border-4 border-primary shadow-md font-bold;
     }
@@ -33,17 +33,40 @@
         flex: 1
     }
 
-    .slides>input#merida:checked~.carousel-slides .slide:nth-of-type(1),
-    .slides>input#cancun:checked~.carousel-slides .slide:nth-of-type(2),
-    .slides>input#aguascalientes:checked~.carousel-slides .slide:nth-of-type(3) {
+    .carousel>input:nth-of-type(1):checked~.slides .carousel-slides .slide:nth-of-type(1),
+    .carousel>input:nth-of-type(2):checked~.slides .carousel-slides .slide:nth-of-type(2),
+    .carousel>input:nth-of-type(3):checked~.slides .carousel-slides .slide:nth-of-type(3) {
         display: block;
         position: relative;
         -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
         animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
 
+    .caption{
+        display: none;
+        position: absolute;
+    }
+
+    .caption-text{
+        font-size: clamp(1rem, 2.5cqi, 2.3rem);
+        line-height: 1;
+    }
+
+    .caption-info{
+        font-size: clamp(1rem, 3.9cqi, 4rem);
+        line-height: 1;
+    }
+
+    .carousel>input:nth-of-type(1):checked~.captions .caption:nth-of-type(1),
+    .carousel>input:nth-of-type(2):checked~.captions .caption:nth-of-type(2),
+    .carousel>input:nth-of-type(3):checked~.captions .caption:nth-of-type(3){
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
     .venue-tittle {
-        font-size: clamp(1rem, 7vw, 2.5rem);
+        font-size: clamp(1rem, 2.3cqi, 3rem);
     }
 
     @-webkit-keyframes scale-up-center {
