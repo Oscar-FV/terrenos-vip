@@ -1,0 +1,73 @@
+@tailwind utilities;
+
+@layer utilities {
+
+    .hero-tittle {
+        font-size: clamp(1.5rem, 4.9vw, 4.5rem);
+        line-height: 1;
+    }
+
+    .hero-tittle-mobile {
+        font-size: clamp(3rem, 1vw, 8rem);
+        line-height: 1;
+    }
+
+    .thumbnail {
+        flex: 1 1 auto;
+        max-width: calc((100% / 3) - 1rem);
+        opacity: 0.8;
+        transition: border-color 0.3s ease, opacity 0.1s ease, opacity 0.3s ease;
+        @apply border-4 border-transparent shadow-sm;
+    }
+
+    .slides>input:nth-of-type(1):checked~.slide-thumbnails li:nth-of-type(1),
+    .slides>input:nth-of-type(2):checked~.slide-thumbnails li:nth-of-type(2),
+    .slides>input:nth-of-type(3):checked~.slide-thumbnails li:nth-of-type(3) {
+        opacity: 1;
+        @apply border-4 border-primary shadow-md font-bold;
+    }
+
+    .slide {
+        display: none;
+        position: absolute;
+        flex: 1
+    }
+
+    .slides>input#merida:checked~.carousel-slides .slide:nth-of-type(1),
+    .slides>input#cancun:checked~.carousel-slides .slide:nth-of-type(2),
+    .slides>input#aguascalientes:checked~.carousel-slides .slide:nth-of-type(3) {
+        display: block;
+        position: relative;
+        -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+    .venue-tittle {
+        font-size: clamp(1rem, 7vw, 2.5rem);
+    }
+
+    @-webkit-keyframes scale-up-center {
+        0% {
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    @keyframes scale-up-center {
+        0% {
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+}

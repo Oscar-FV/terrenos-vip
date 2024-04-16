@@ -8,7 +8,7 @@ interface Props {
 
 const Slogan = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
     return (
-        <section ref={ref} data-color={color} data-text={text} className="md:h-[50vh] h-[100vh] flex flex-col justify-center md:mx-24 sm:mx-16 mx-4 xl:p-0">
+        <section ref={ref} data-color={color} data-text={text} className="md:h-[70vh] h-[100vh] flex flex-col justify-center md:mx-24 sm:mx-16 mx-4 xl:p-0">
             <h1 className="slogan-text font-bold">
                 SOMOS <span className="text-accent">CREADORES</span>
             </h1>
