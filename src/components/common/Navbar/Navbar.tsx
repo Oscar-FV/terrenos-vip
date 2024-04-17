@@ -47,7 +47,7 @@ const Navbar = () => {
                                 <a href="#" className="block px-3 text-secondary rounded md:border-0 md:p-0 navItem">Webinars</a>
                             </li>
                             <li>
-                                <Button size="lg" text="¡Contáctanos!" />
+                                <Button text="¡Contáctanos!" />
                             </li>
                         </ul>
                     </div>
