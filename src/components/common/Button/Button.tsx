@@ -1,33 +1,10 @@
 interface Props {
-    size?: string,
     text: string,
-    type?: string
+    type?: string,
+    className?: String,
 }
 
-const Button = ({ size = "base", text, type }: Props) => {
-    let buttonClass = "";
-
-    switch (size) {
-        case "xs":
-            buttonClass = "text-xs";
-            break;
-        case "sm":
-            buttonClass = "text-sm";
-            break;
-        case "base":
-            buttonClass = "text-base";
-            break;
-        case "lg":
-            buttonClass = "text-lg";
-            break;
-        case "xl":
-            buttonClass = "text-xl";
-            break;
-        default:
-            buttonClass = "text-base";
-            break;
-    }
-
+const Button = ({ text, type, className }: Props) => {
     switch (type) {
         case ("button-arrow"):
             return (
@@ -46,7 +23,7 @@ const Button = ({ size = "base", text, type }: Props) => {
             return (
                 <a
                     href=""
-                    className={`px-3 py-2 border-2 border-primary bg-transparent hover:bg-primary hover:text-white text-primary focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center transition-colors duration-200 ease-in-out ${buttonClass}`}
+                    className={`${className} px-3 py-2 border-2 border-primary bg-transparent hover:bg-primary hover:text-white text-primary focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center transition-colors duration-200 ease-in-out md:text-xl text-base`}
                 >
                     {text}
                 </a>
@@ -55,7 +32,7 @@ const Button = ({ size = "base", text, type }: Props) => {
             return (
                 <a
                     href=""
-                    className={`px-3 py-2 border-2 border-transparent bg-primary hover:bg-secondary text-white focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center transition-colors duration-200 ease-in-out ${buttonClass}`}
+                    className={`${className} px-3 py-2 border-2 border-transparent bg-primary hover:bg-secondary text-white focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center transition-colors duration-200 ease-in-out md:text-xl text-base`}
                 >
                     {text}
                 </a>

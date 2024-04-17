@@ -53,7 +53,7 @@
     }
 
     .caption-info{
-        font-size: clamp(1rem, 3.9cqi, 4rem);
+        font-size: clamp(1.3rem, 3.9cqi, 4rem);
         line-height: 1;
     }
 
@@ -61,7 +61,6 @@
     .carousel>input:nth-of-type(2):checked~.captions .caption:nth-of-type(2),
     .carousel>input:nth-of-type(3):checked~.captions .caption:nth-of-type(3){
         display: flex;
-        flex-direction: column;
         position: relative;
     }
 
