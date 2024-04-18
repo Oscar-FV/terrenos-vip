@@ -10,14 +10,14 @@ interface Props {
 
 const TimeLine = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
     return (
-        <Container height="h-[100vh]" className="pt-52 md:mx-0 mx-8">
+        <Container height="h-[100vh]" className="pt-52 lg:mx-0 md:mx-4 mx-8">
             <div ref={ref} data-color={color} data-text={text} className=" h-full">
                 <h2 className="font-bold hero-tittle mt-10">¿Cómo Funciona?</h2>
                 <h3 className="mt-1 md:text-3xl text-xl">Descubre, elige, contáctanos. ¡Nosotros nos encargamos del resto!</h3>
 
-                <div className="md:mx-32 mt-10 flex justify-center h-full">
-                    <ol className="md:relative w-full">
-                        <li className="block absolute h-full w-1 bg-white left-[50%] top-[20px] translate-x-[-50%]">
+                <div className="lg:mx-32 mt-10 flex justify-center">
+                    <ol className="md:relative w-full h-auto">
+                        <li className="block absolute h-[70%] w-1 bg-white left-[50%] top-[20px] translate-x-[-50%]">
                         </li>
                         <li className="flex justify-start mb-6">
                             <section className="relative item-content p-[20px] z-10">  
