@@ -13,7 +13,7 @@ interface Props {
 const Gallery = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
     return (
         <Container height="h-[70vh]">
-            <div ref={ref} data-color={color} data-text={text} className="mt-20 md:mx-4 mx-8 xl:m-0">
+            <div ref={ref} data-color={color} data-text={text} className="md:mx-4 mx-8 xl:m-0">
 
                 <h2 className="font-bold text-primary hero-tittle">Nuestras Top Sedes</h2>
                 <h3 className="mt-1 md:text-3xl text-xl">Descubre nuestras sedes favoritas</h3>

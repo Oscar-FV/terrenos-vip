@@ -7,6 +7,7 @@ import Navbar from './components/common/Navbar/Navbar';
 import HeroSection from './components/HeroSection/HeroSection';
 import Slogan from './components/Slogan/Slogan';
 import Gallery from './components/Gallery/Gallery';
+import TimeLine from './components/TimeLIne/TimeLine';
 
 function App() {
   const scrollPosition = useScrollPosition();
@@ -22,6 +23,7 @@ function App() {
       <HeroSection color="#f4f4f4" text="#f4f4f4" ref={(ref) => (panelRefs.current[0] = ref!)}/>
       <Slogan color="#2E9BF8" text="#f4f4f4" ref={(ref) => (panelRefs.current[1] = ref!)}/>
       <Gallery color="#f4f4f4" text="#003764" ref={(ref) => (panelRefs.current[2] = ref!)}/>
+      <TimeLine color="#2E9BF8" text="#f4f4f4" ref={(ref) => (panelRefs.current[3] = ref!)}/>
       <style>{`
         body {
           background-color: ${activePanelColor};

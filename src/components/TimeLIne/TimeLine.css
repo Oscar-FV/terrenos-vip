@@ -1,0 +1,7 @@
+@tailwind utilities;
+
+@layer utilities{
+    .item-content{
+        width: calc(calc(50% - 60px));
+    }
+}
