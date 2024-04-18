@@ -41,8 +41,8 @@ const Gallery = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
                             {topVenues.map((venue) =>
                                 <li className="thumbnail thumbnail-active" key={venue.city}>
                                     <label htmlFor={venue.city} className="cursor-pointer">
-                                        <img src={venue.image} loading="lazy" className="h-full" />
-                                        <p className="uppercase text-center mt-2 xl:text-sm text-xs">{venue.city}</p>
+                                        <img src={venue.image} loading="lazy" className="md:h-full md:aspect-auto aspect-square" />
+                                        <p className="uppercase text-center mt-2 md:text-xl sm:text-xs text-[0.5rem]">{venue.city}</p>
                                     </label>
                                 </li>
                             )}
