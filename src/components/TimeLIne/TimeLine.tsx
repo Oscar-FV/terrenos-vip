@@ -1,52 +1,39 @@
-import { forwardRef } from "react"
-import Container from "../common/Container/Container"
-import { Icon } from '@iconify/react';
-import "./TimeLine.css"
+import { forwardRef } from "react";
+import Container from "../common/Container/Container";
+import "./TimeLine.css";
+import ListItems from "../../consts/TimeLineInfo";
+import TimeLineItem from "./TimeLineItem";
 
 interface Props {
-    color: string,
-    text: string
+  color: string;
+  text: string;
 }
 
 const TimeLine = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
-    return (
-        <Container height="h-[100vh]" className="pt-52 lg:mx-0 md:mx-4 mx-8">
-            <div ref={ref} data-color={color} data-text={text} className=" h-full">
-                <h2 className="font-bold hero-tittle mt-10">¿Cómo Funciona?</h2>
-                <h3 className="mt-1 md:text-3xl text-xl">Descubre, elige, contáctanos. ¡Nosotros nos encargamos del resto!</h3>
+  return (
+    <Container height="h-[100vh]" className="mx-8 md:mx-4 lg:mx-0 lg:pt-52">
+      <div ref={ref} data-color={color} data-text={text} className=" h-full">
+        <h2 className="hero-tittle mt-10 font-bold">¿Cómo Funciona?</h2>
+        <h3 className="mt-1 text-xl md:text-3xl">
+          Descubre, elige, contáctanos. ¡Nosotros nos encargamos del resto!
+        </h3>
 
-                <div className="lg:mx-32 mt-10 flex justify-center">
-                    <ol className="md:relative w-full h-auto">
-                        <li className="block absolute h-[70%] w-1 bg-white left-[50%] top-[20px] translate-x-[-50%]">
-                        </li>
-                        <li className="flex justify-start mb-6">
-                            <section className="relative item-content p-[20px] z-10">  
-                                <Icon icon="mdi:home-search-outline" className="absolute text-secondary bg-white rounded-[50%] h-20 w-20 p-3 right-[-100px]"/>
-                                <h3 className="timeline-tittle font-bold capitalize mt-2">Descubre tu espacio ideal</h3>
-                                <p className="font-light timeline-text mt-2">Encuentra el espacio perfecto que te brinde la oportunidad de construir la vida que siempre has imaginado. lore</p>
-                            </section>
-                        </li>
-                        <li className="flex justify-end mb-6 z-10">
-                            <section className="relative item-content p-[20px]">  
-                                <Icon icon="healthicons:bills-outline" className="absolute text-secondary bg-white rounded-[50%] h-20 w-20 p-3 left-[-100px]"/>
-                                <h3 className="timeline-tittle font-bold capitalize mt-2">reserva tu sueño con confianza</h3>
-                                <p className="font-light timeline-text mt-2">Bloquea tu terreno o casa ideal con solo $5,000 pesos y asegura tu lugar en el paraíso inmobiliario sin preocuparte por revisiones de buró de crédito.</p>
-                            </section>
-                        </li>
-                        
-                        <li className="flex justify-start mb-6">
-                            <section className="relative item-content p-[20px] z-10 ">  
-                                <Icon icon="bitcoin-icons:sign-outline" className="absolute text-secondary bg-white rounded-[50%] h-20 w-20 p-3 right-[-100px]"/>
-                                <h3 className="timeline-tittle font-bold capitalize mt-2">Formaliza tu Compromiso</h3>
-                                <p className="font-light timeline-text mt-2">Celebra este emocionante paso hacia la propiedad de tu nuevo hogar y deja que el proceso de realización de tus sueños comience oficialmente.</p>
-                            </section>
-                        </li>
-                    </ol>
-                </div>
-            </div>
+        <div className="mt-10 flex justify-center lg:mx-32">
+          <ol className="h-auto w-full md:relative">
+            <li className="absolute left-[50%] top-[20px] hidden h-[70%] w-1 translate-x-[-50%] bg-white md:block"></li>
+            {ListItems.map((item) => (
+              <TimeLineItem
+                icon={item.icon}
+                tittle={item.tittle}
+                text={item.text}
+                direction={item.direction}
+              />
+            ))}
+          </ol>
+        </div>
+      </div>
+    </Container>
+  );
+});
 
-        </Container>
-    )
-})
-
-export default TimeLine
+export default TimeLine;

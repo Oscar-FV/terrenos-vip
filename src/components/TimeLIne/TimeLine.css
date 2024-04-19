@@ -6,7 +6,7 @@
     }
 
     .timeline-tittle {
-        font-size: clamp(1rem, 10cqi, 2rem);
+        font-size: clamp(1rem, 10cqi, 1.4rem);
         line-height: 1;
     }
 

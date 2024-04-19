@@ -1,18 +1,32 @@
-import "./Grid.css"
-import video from "../../../assets/images/peninsula.mp4"
-
+import "./Grid.css";
+import video from "../../../assets/images/peninsula.mp4";
 
 const Grid = () => {
-    return (
-        <>
-            <div className="md:grid md:grid-cols-4 md:auto-rows-[200px] md:mt-20 md:gap-[16px] w-full h-full md:h-auto">
-                <div className="overlay absolute w-full h-full bg-black/50 md:hidden"></div>
-                <img src="/images/desarrollo-caribe.webp" className="gallery-img shadow-md border border-gray-100 col-start-2 col-span-3 hidden md:block" alt="" />
-                <video src={video} playsInline autoPlay muted loop className="gallery-img md:shadow-md md:border md:border-gray-100 md:col-span-3 md:row-span-2"></video>
-                <img src="/images/flamingos.webp" className="gallery-img shadow-md border border-gray-100 row-span-2 hidden md:block" alt="" />
-            </div>
-        </>
-    )
-}
+  return (
+    <>
+      <div className="h-full w-full md:mt-20 md:grid md:h-auto md:auto-rows-[200px] md:grid-cols-4 md:gap-[16px]">
+        <div className="overlay absolute h-full w-full bg-black/50 md:hidden"></div>
+        <img
+          src="/images/desarrollo-caribe.webp"
+          className="gallery-img col-span-3 col-start-2 hidden border border-gray-100 shadow-md md:block"
+          alt=""
+        />
+        <video
+          src={video}
+          playsInline
+          autoPlay
+          muted
+          loop
+          className="gallery-img md:col-span-3 md:row-span-2 md:border md:border-gray-100 md:shadow-md"
+        ></video>
+        <img
+          src="/images/flamingos.webp"
+          className="gallery-img row-span-2 hidden border border-gray-100 shadow-md md:block"
+          alt=""
+        />
+      </div>
+    </>
+  );
+};
 
-export default Grid
+export default Grid;
