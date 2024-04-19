@@ -2,6 +2,16 @@
 
 @layer utilities{
     .item-content{
-        width: calc(calc(50% - 60px));
+        width: calc(50% - 60px);
+    }
+
+    .timeline-tittle {
+        font-size: clamp(1rem, 10cqi, 1.4rem);
+        line-height: 1;
+    }
+
+    .timeline-text {
+        font-size: clamp(1rem, 10cqi, 1.3rem);
+        line-height: 1;
     }
 }
