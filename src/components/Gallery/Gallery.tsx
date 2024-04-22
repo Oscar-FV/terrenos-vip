@@ -36,6 +36,7 @@ const Gallery = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
                   id={venue.city}
                   className="hidden"
                   defaultChecked={index === 0}
+                  key={index}
                 />
               </React.Fragment>
             ))}
@@ -74,7 +75,7 @@ const Gallery = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
 
           <div className="captions w-full">
             {topVenues.map((venue) => (
-              <figcaption className="caption flex-col">
+              <figcaption className="caption flex-col" key={"caption-"  + venue.city}>
                 <div className="caption-text md:h-fit">
                   <p className="">{venue.paragraph1}</p>
                   <p className="mt-4">{venue.paragraph2}</p>
