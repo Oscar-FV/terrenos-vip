@@ -1,5 +1,4 @@
-import { Icon } from "@iconify/react/dist/iconify.js";
-import { forwardRef, useEffect, useState } from "react";
+import { forwardRef } from "react";
 import ContactForm from "./ContactForm";
 import "./Contact.css";
 import ContactItem from "./ContactItem";
@@ -32,7 +31,7 @@ const ContactUs = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
               ¡Esperamos saber de ti pronto!
             </p>
             <ContactForm />
-            <div className="flex flex-wrap h-full gap-8 border border-white mt-16 md:static md:hidden">
+            <div className="mt-16 flex h-full flex-wrap gap-8 md:static md:hidden">
               <ContactItem
                 icon="ph:phone-call"
                 tittle="Teléfono"
@@ -58,7 +57,7 @@ const ContactUs = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
             className="aspect-auto h-full w-full object-cover opacity-45"
           />
         </div>
-        <div className="hidden  h-full grow flex-col gap-y-24 border border-white pt-16 md:static md:flex">
+        <div className="hidden  h-full grow flex-col gap-y-24 pt-16 md:static md:flex">
           <ContactItem
             icon="ph:phone-call"
             tittle="Teléfono"

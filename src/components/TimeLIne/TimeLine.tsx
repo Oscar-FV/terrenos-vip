@@ -27,6 +27,7 @@ const TimeLine = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
                 tittle={item.tittle}
                 text={item.text}
                 direction={item.direction}
+                key={item.tittle}
               />
             ))}
           </ol>
