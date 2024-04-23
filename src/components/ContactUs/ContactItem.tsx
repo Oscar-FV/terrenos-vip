@@ -9,7 +9,7 @@ interface Props {
 
 const ContactItem = ({ icon, iconClassName, tittle, text }: Props) => {
   return (
-    <div className="md:w-full sm:w-[calc(90%/3-32px)]">
+    <div className="md:w-full sm:w-[calc(90%/3)]">
       <div className="flex items-center gap-x-2  md:gap-x-4">
         <Icon
           icon={icon}

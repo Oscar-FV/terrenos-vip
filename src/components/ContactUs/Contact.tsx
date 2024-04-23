@@ -1,7 +1,9 @@
-import { forwardRef } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import ContactForm from "./ContactForm";
 import "./Contact.css";
 import ContactItem from "./ContactItem";
+import { EmailJSResponseStatus } from "@emailjs/browser";
+import Toast from "../common/Toast/Toast";
 
 interface Props {
   color: string;
@@ -9,13 +11,39 @@ interface Props {
 }
 
 const ContactUs = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
+
+  const [isEmailSent, setIsEmailSent] = useState<number>(0);
+  const [showSuccessMessage, setShowSuccessMessage] = useState<boolean>(false);
+
+  const handleEmailResponse = (emailResponse: EmailJSResponseStatus) => {
+    setIsEmailSent(emailResponse.status)
+  }
+
+  useEffect(() => {
+
+    if(isEmailSent === 200 || isEmailSent === 400){
+      setShowSuccessMessage(true);
+      const timer = setTimeout(() => {
+        setShowSuccessMessage(false);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+      setIsEmailSent(0)
+    }
+  }, [isEmailSent])
+
   return (
-    <article className="h-[100vh] md:h-[80vh]">
+    <article className="h-[100vh] md:h-[80vh] relative">
+
+      {showSuccessMessage && (
+        <Toast status={isEmailSent} />
+      )}
+      
       <div
         ref={ref}
         data-color={color}
         data-text={text}
-        className="flex h-full w-full gap-x-4 md:pr-8"
+        className="flex h-full w-full gap-x-10 md:pr-8"
       >
         <div
           className="h-full w-full bg-black md:w-[80%] xl:w-[65%]"
@@ -30,8 +58,8 @@ const ContactUs = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
             <p className="mt-5 w-full pr-8 font-bold leading-none text-white md:text-[3cqb] xl:pr-2">
               ¡Esperamos saber de ti pronto!
             </p>
-            <ContactForm />
-            <div className="mt-16 flex h-full flex-wrap gap-8 md:static md:hidden">
+            <ContactForm emailStatus={handleEmailResponse}/>
+            <div className="mt-16 flex sm:justify-center h-full flex-wrap gap-8 md:static md:hidden">
               <ContactItem
                 icon="ph:phone-call"
                 tittle="Teléfono"
