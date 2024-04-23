@@ -2,15 +2,16 @@ interface Props {
   text: string;
   type?: string;
   className?: String;
+  onClick?: ()  => void;
 }
 
-const Button = ({ text, type, className }: Props) => {
+const Button = ({ text, type, className, onClick }: Props) => {
   switch (type) {
     case "button-arrow":
       return (
-        <a
-          href="#_"
+        <button
           className="group relative inline-flex items-center justify-start overflow-hidden rounded py-3 pl-4 pr-12 text-secondary transition-all duration-150 ease-in-out hover:pl-10 hover:pr-6 md:bg-[#f4f4f4]"
+          onClick={onClick}
         >
           <span className="absolute bottom-0 left-0 h-1 w-full bg-primary transition-all duration-150 ease-in-out group-hover:h-full"></span>
           <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
@@ -48,25 +49,25 @@ const Button = ({ text, type, className }: Props) => {
           <span className="relative w-full text-left text-xl text-white transition-colors duration-200 ease-in-out group-hover:text-white md:text-secondary">
             {text}
           </span>
-        </a>
+        </button>
       );
     case "button-secondary":
       return (
-        <a
-          href=""
+        <button
           className={`${className} rounded-lg border-2 border-primary bg-transparent px-3 py-2 text-center text-base text-primary transition-colors duration-200 ease-in-out hover:bg-primary hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 md:text-xl`}
+          onClick={onClick}
         >
           {text}
-        </a>
+        </button>
       );
     default:
       return (
-        <a
-          href=""
+        <button
           className={`${className} rounded-lg border-2 border-transparent bg-primary px-3 py-2 text-center text-base text-white transition-colors duration-200 ease-in-out hover:bg-secondary focus:outline-none focus:ring-4 focus:ring-blue-300 md:text-xl`}
+          onClick={onClick}
         >
           {text}
-        </a>
+        </button>
       );
   }
 };

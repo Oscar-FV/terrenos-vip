@@ -4,13 +4,14 @@ interface Props {
   icon: string;
   tittle: string;
   text: string;
+  goto: string;
   iconClassName?: string;
 }
 
-const ContactItem = ({ icon, iconClassName, tittle, text }: Props) => {
+const ContactItem = ({ icon, iconClassName, tittle, text, goto }: Props) => {
   return (
-    <div className="md:w-full sm:w-[calc(90%/3-32px)]">
-      <div className="flex items-center gap-x-2  md:gap-x-4">
+    <div className="md:w-full sm:w-[calc(90%/3)]">
+      <div className="flex items-center gap-x-2 md:gap-x-4">
         <Icon
           icon={icon}
           className={`h-8 w-8 text-white md:h-12 md:w-12 md:text-primary ${iconClassName}`}
@@ -19,9 +20,9 @@ const ContactItem = ({ icon, iconClassName, tittle, text }: Props) => {
           {tittle}
         </span>
       </div>
-      <p className="text-[2cqb] font-light  text-white md:w-full md:pl-20 md:text-[2.5cqb] md:text-secondary">
+      <a href={goto} target="_blank" rel="noopener noreferrer" className="text-[2cqb] font-light  text-white md:w-full md:pl-20 md:text-[2.5cqb] md:text-secondary underline decoration-3">
         {text}
-      </p>
+      </a>
     </div>
   );
 };
