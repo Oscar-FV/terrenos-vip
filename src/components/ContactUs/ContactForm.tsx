@@ -8,7 +8,7 @@ interface Props{
 
 const ContactForm = ({emailStatus}: Props) => {
   const form = useRef<HTMLFormElement>(null);
-  
+  console.log(import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
   const handleSubmit = (
     e: FormEvent<HTMLFormElement>,
     form: React.RefObject<HTMLFormElement>,
