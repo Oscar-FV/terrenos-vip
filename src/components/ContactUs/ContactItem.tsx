@@ -10,7 +10,7 @@ interface Props {
 
 const ContactItem = ({ icon, iconClassName, tittle, text, goto }: Props) => {
   return (
-    <div className="md:w-full sm:w-[calc(90%/3)]">
+    <a href={goto} target="_blank" rel="noopener noreferrer" className="md:w-full sm:w-[calc(90%/3)]">
       <div className="flex items-center gap-x-2 md:gap-x-4">
         <Icon
           icon={icon}
@@ -20,10 +20,10 @@ const ContactItem = ({ icon, iconClassName, tittle, text, goto }: Props) => {
           {tittle}
         </span>
       </div>
-      <a href={goto} target="_blank" rel="noopener noreferrer" className="text-[2cqb] font-light  text-white md:w-full md:pl-20 md:text-[2.5cqb] md:text-secondary underline decoration-3">
+      <p className="text-[2cqb] font-light  text-white md:w-full md:text-[2.5cqb] md:text-secondary underline decoration-3">
         {text}
-      </a>
-    </div>
+      </p>
+    </a>
   );
 };
 

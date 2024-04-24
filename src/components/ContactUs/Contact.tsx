@@ -11,34 +11,27 @@ interface Props {
 }
 
 const ContactUs = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
-
   const [isEmailSent, setIsEmailSent] = useState<number>(0);
   const [showSuccessMessage, setShowSuccessMessage] = useState<boolean>(false);
 
   const handleEmailResponse = (emailResponse: EmailJSResponseStatus) => {
-    setIsEmailSent(emailResponse.status)
-  }
+    setIsEmailSent(emailResponse.status);
+  };
 
   useEffect(() => {
-
-    if(isEmailSent === 200 || isEmailSent === 400){
+    if (isEmailSent === 200 || isEmailSent === 400) {
       setShowSuccessMessage(true);
       const timer = setTimeout(() => {
         setShowSuccessMessage(false);
       }, 3000);
 
       return () => clearTimeout(timer);
-      setIsEmailSent(0)
+      setIsEmailSent(0);
     }
-  }, [isEmailSent])
+  }, [isEmailSent]);
 
   return (
-    <article className="h-[100vh] md:h-[80vh] relative">
-
-      {showSuccessMessage && (
-        <Toast status={isEmailSent} />
-      )}
-      
+    <article className="h-[100vh] md:h-[80vh]">
       <div
         ref={ref}
         data-color={color}
@@ -46,10 +39,11 @@ const ContactUs = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
         className="flex h-full w-full gap-x-10 md:pr-8"
       >
         <div
-          className="h-full w-full bg-black md:w-[80%] xl:w-[65%]"
+          className="relative h-full w-full bg-black md:w-[80%] xl:w-[65%]"
           id="formDiv"
         >
-          <div className="absolute z-10 mt-8 px-8 md:mt-16 md:w-[60%] lg:w-[65%] lg:px-16">
+          {showSuccessMessage && <Toast status={isEmailSent} />}
+          <div className="absolute z-10 mt-8 px-8 md:mt-16 lg:px-16">
             <h2 className="hero-tittle font-bold text-white">Contáctanos</h2>
             <p className="mt-3 w-full pr-8 leading-none text-white md:text-[3cqb] xl:pr-2">
               Nuestro equipo estará encantado de atenderte y proporcionarte la
@@ -58,8 +52,8 @@ const ContactUs = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
             <p className="mt-5 w-full pr-8 font-bold leading-none text-white md:text-[3cqb] xl:pr-2">
               ¡Esperamos saber de ti pronto!
             </p>
-            <ContactForm emailStatus={handleEmailResponse}/>
-            <div className="mt-16 flex sm:justify-center h-full flex-wrap gap-8 md:static md:hidden">
+            <ContactForm emailStatus={handleEmailResponse} />
+            <div className="mt-10 flex h-full flex-wrap gap-8 sm:justify-center md:static md:hidden">
               <ContactItem
                 icon="ph:phone-call"
                 tittle="Teléfono"

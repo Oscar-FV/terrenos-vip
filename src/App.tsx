@@ -9,6 +9,7 @@ import Slogan from './components/Slogan/Slogan';
 import Gallery from './components/Gallery/Gallery';
 import TimeLine from './components/TimeLIne/TimeLine';
 import ContactUs from './components/ContactUs/Contact';
+import Footer from './components/common/Footer/Footer';
 
 function App() {
   const scrollPosition = useScrollPosition();
@@ -26,6 +27,7 @@ function App() {
       <Gallery color="#f4f4f4" text="#003764" ref={(ref) => (panelRefs.current[2] = ref!)}/>
       <TimeLine color="#2E9BF8" text="#f4f4f4" ref={(ref) => (panelRefs.current[3] = ref!)}/>
       <ContactUs color="#f4f4f4" text="#003764" ref={(ref) => (panelRefs.current[4] = ref!)}/>
+      <Footer />
       <style>{`
         body {
           background-color: ${activePanelColor};
