@@ -8,7 +8,7 @@ const Grid = () => {
         <div className="overlay absolute h-full w-full bg-black/50 md:hidden"></div>
         <img
           src="/images/desarrollo-caribe.webp"
-          className="gallery-img col-span-3 col-start-2 hidden border border-gray-100 shadow-md md:block"
+          className="gallery-img col-span-3 col-start-2 hidden border border-gray-100 shadow-md md:block animate-fade-left animate-delay-100"
           alt=""
         />
         <video
@@ -17,11 +17,11 @@ const Grid = () => {
           autoPlay
           muted
           loop
-          className="gallery-img md:col-span-3 md:row-span-2 md:border md:border-gray-100 md:shadow-md"
+          className="gallery-img md:col-span-3 md:row-span-2 md:border md:border-gray-100 md:shadow-md md:animate-fade-down md:animate-delay-200"
         ></video>
         <img
           src="/images/flamingos.webp"
-          className="gallery-img row-span-2 hidden border border-gray-100 shadow-md md:block"
+          className="gallery-img row-span-2 hidden border border-gray-100 shadow-md md:block animate-fade-up animate-delay-150"
           alt=""
         />
       </div>

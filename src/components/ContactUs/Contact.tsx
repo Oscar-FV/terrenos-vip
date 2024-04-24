@@ -37,6 +37,7 @@ const ContactUs = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
         data-color={color}
         data-text={text}
         className="flex h-full w-full gap-x-10 lg:pr-8"
+        id="contact-info"
       >
         <div
           className="relative h-full w-full bg-black lg:w-[80%] xl:w-[65%]"
