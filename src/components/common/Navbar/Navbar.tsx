@@ -76,7 +76,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <Button text="¡Contáctanos!" />
+                <Button text="¡Contáctanos!" goto="#contact-info"/>
               </li>
             </ul>
           </div>
@@ -103,7 +103,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <Button text="¡Contáctanos!" />
+                <Button text="¡Contáctanos!" goto="#contact-info"/>
               </li>
             </ul>
           </div>

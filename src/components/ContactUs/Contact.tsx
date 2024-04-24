@@ -31,19 +31,20 @@ const ContactUs = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
   }, [isEmailSent]);
 
   return (
-    <article className="h-[100vh] md:h-[80vh]">
+    <article className="md:h-[100vh] sm:h-[110vh] h-[140vh]">
       <div
         ref={ref}
         data-color={color}
         data-text={text}
-        className="flex h-full w-full gap-x-10 md:pr-8"
+        className="flex h-full w-full gap-x-10 lg:pr-8"
+        id="contact-info"
       >
         <div
-          className="relative h-full w-full bg-black md:w-[80%] xl:w-[65%]"
+          className="relative h-full w-full bg-black lg:w-[80%] xl:w-[65%]"
           id="formDiv"
         >
           {showSuccessMessage && <Toast status={isEmailSent} />}
-          <div className="absolute z-10 mt-8 px-8 md:mt-16 lg:px-16">
+          <div className="absolute z-10 mt-8 px-8 lg:mt-16 lg:px-16">
             <h2 className="hero-tittle font-bold text-white">Contáctanos</h2>
             <p className="mt-3 w-full pr-8 leading-none text-white md:text-[3cqb] xl:pr-2">
               Nuestro equipo estará encantado de atenderte y proporcionarte la
@@ -53,7 +54,7 @@ const ContactUs = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
               ¡Esperamos saber de ti pronto!
             </p>
             <ContactForm emailStatus={handleEmailResponse} />
-            <div className="mt-10 flex h-full flex-wrap gap-8 sm:justify-center md:static md:hidden">
+            <div className="mt-10 flex h-full flex-wrap gap-8 sm:justify-center lg:static lg:hidden">
               <ContactItem
                 icon="ph:phone-call"
                 tittle="Teléfono"
@@ -82,7 +83,7 @@ const ContactUs = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
             className="aspect-auto h-full w-full object-cover opacity-45"
           />
         </div>
-        <div className="hidden  h-full grow flex-col gap-y-24 pt-16 md:static md:flex">
+        <div className="hidden  h-full flex-col gap-y-24 pt-16 lg:static lg:flex">
           <ContactItem
             icon="ph:phone-call"
             tittle="Teléfono"

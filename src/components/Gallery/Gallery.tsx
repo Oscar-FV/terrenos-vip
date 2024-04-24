@@ -11,18 +11,19 @@ interface Props {
 }
 
 const Gallery = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
+
   return (
-    <Container height="lg:h-[70vh] mb-16">
+    <Container height="lg:h-[70vh] mb-16" id="top-venues">
       <div
         ref={ref}
         data-color={color}
         data-text={text}
         className="mx-8 md:mx-4 xl:m-0"
       >
-        <h2 className="hero-tittle font-bold text-primary">
+        <h2 className={`hero-tittle font-bold `} >
           Nuestras Top Sedes
         </h2>
-        <h3 className="mt-1 text-xl md:text-3xl">
+        <h3 className={`mt-1 text-xl md:text-3xl `}>
           Descubre nuestras sedes favoritas
         </h3>
 
@@ -55,16 +56,16 @@ const Gallery = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
                 </li>
               ))}
             </ul>
-            <ul className="slide-thumbnails flex justify-center gap-x-4">
+            <ul className="slide-thumbnails flex justify-center sm:flex-nowrap flex-wrap  gap-x-5" >
               {topVenues.map((venue) => (
-                <li className="thumbnail thumbnail-active" key={venue.city}>
-                  <label htmlFor={venue.city} className="cursor-pointer">
+                <li className={`sm:thumbnail thumbnail-mobile thumbnail-active`} key={venue.city}>
+                  <label htmlFor={venue.city} className="cursor-pointer flex flex-col items-center">
                     <img
                       src={venue.image}
                       loading="lazy"
-                      className="aspect-square md:aspect-auto md:h-full"
+                      className="aspect-square md:aspect-auto md:h-full border-4 border-transparent"
                     />
-                    <p className="mt-2 text-center text-[0.5rem] uppercase sm:text-xs md:text-xl">
+                    <p className="mt-2 text-center uppercase md:text-[1.6cqb] text-[1.3cqb]">
                       {venue.city}
                     </p>
                   </label>
@@ -82,7 +83,7 @@ const Gallery = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
                 </div>
                 <div className="caption-info mt-4 w-full md:mt-6 md:h-fit">
                   <h3 className="font-bold">Comieza tu inversión desde:</h3>
-                  <p className="font-extrabold text-primary">
+                  <p className="font-extrabold text-primary md:mt-0 mt-1">
                     $2,050 MXN al mes
                   </p>
 

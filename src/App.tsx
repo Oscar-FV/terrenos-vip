@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <HeroSection color="#f4f4f4" text="#f4f4f4" ref={(ref) => (panelRefs.current[0] = ref!)}/>
+      <HeroSection color="#f4f4f4" text="#2E9BF8" ref={(ref) => (panelRefs.current[0] = ref!)}/>
       <Slogan color="#2E9BF8" text="#f4f4f4" ref={(ref) => (panelRefs.current[1] = ref!)}/>
       <Gallery color="#f4f4f4" text="#003764" ref={(ref) => (panelRefs.current[2] = ref!)}/>
       <TimeLine color="#2E9BF8" text="#f4f4f4" ref={(ref) => (panelRefs.current[3] = ref!)}/>

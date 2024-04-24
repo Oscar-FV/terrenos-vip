@@ -31,6 +31,14 @@ const topVenues: Venue[] = [
         paragraph2: "Los inmuebles en Aguascalientes ofrecen una plusvalía y retorno de inversión superiores a la bolsa de valores.",
         image: "/images/aguascalientes.webp",
         ahref: ""
+    },
+    {
+        city: "monterrey",
+        estate: "n.l.",
+        paragraph1:"Monterrey, fusiona su dinamismo urbano con un legado histórico notable. Conocida como la " + '"Ciudad de las Montañas."',
+        paragraph2: "Es un centro industrial y comercial importante en México, con una amplia oferta cultural que incluye festivales anuales y eventos deportivos.",
+        image: "/images/monterrey.webp",
+        ahref: ""
     }
 ]
 

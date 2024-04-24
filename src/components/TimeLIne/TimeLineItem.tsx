@@ -28,7 +28,7 @@ const TimeLineItem = ({icon, tittle, text, direction}:Props) => {
             </li>
             <li className={`flex ${justify} mb-6`}>
                 <section className="relative md:block flex gap-x-4 md:item-content md:p-[20px] z-10">
-                    <Icon icon={icon} className={`md:absolute text-secondary bg-white rounded-[50%] sm:h-20 h-16 sm:w-20 w-16 p-3 ${justify_icon}`}  />
+                    <Icon icon={icon} className={`md:absolute text-secondary bg-white rounded-[50%] sm:h-20 h-14 sm:w-20 w-14 p-3 ${justify_icon}`}  />
                     <div className="w-[100%]">
                         <h3 className="timeline-tittle font-bold capitalize md:mt-2">{tittle}</h3>
                         <p className="font-light timeline-text mt-2">{text}</p>

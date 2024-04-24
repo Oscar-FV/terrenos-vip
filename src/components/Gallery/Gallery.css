@@ -14,17 +14,28 @@
 
     .thumbnail {
         flex: 1 1 auto;
-        max-width: calc((100% / 3) - 1rem);
+        max-width: calc((100% / 4) - 1rem);
         opacity: 0.8;
         transition: border-color 0.3s ease, opacity 0.1s ease;
         @apply border-4 border-transparent shadow-sm;
     }
 
+    .thumbnail-mobile{
+        max-width: calc((100% / 2) - 1rem);
+    }
+
     .carousel>input:nth-of-type(1):checked~.slides .slide-thumbnails li:nth-of-type(1),
     .carousel>input:nth-of-type(2):checked~.slides .slide-thumbnails li:nth-of-type(2),
-    .carousel>input:nth-of-type(3):checked~.slides .slide-thumbnails li:nth-of-type(3) {
-        opacity: 1;
-        @apply border-4 border-primary shadow-md font-bold;
+    .carousel>input:nth-of-type(3):checked~.slides .slide-thumbnails li:nth-of-type(3),
+    .carousel>input:nth-of-type(4):checked~.slides .slide-thumbnails li:nth-of-type(4){
+
+        img{
+            opacity: 1;
+            @apply border-4 border-primary shadow-md ;
+        }
+        p{
+            @apply font-bold
+        }
     }
 
     .slide {
@@ -35,7 +46,8 @@
 
     .carousel>input:nth-of-type(1):checked~.slides .carousel-slides .slide:nth-of-type(1),
     .carousel>input:nth-of-type(2):checked~.slides .carousel-slides .slide:nth-of-type(2),
-    .carousel>input:nth-of-type(3):checked~.slides .carousel-slides .slide:nth-of-type(3) {
+    .carousel>input:nth-of-type(3):checked~.slides .carousel-slides .slide:nth-of-type(3),
+    .carousel>input:nth-of-type(4):checked~.slides .carousel-slides .slide:nth-of-type(4) {
         display: block;
         position: relative;
         -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -59,7 +71,8 @@
 
     .carousel>input:nth-of-type(1):checked~.captions .caption:nth-of-type(1),
     .carousel>input:nth-of-type(2):checked~.captions .caption:nth-of-type(2),
-    .carousel>input:nth-of-type(3):checked~.captions .caption:nth-of-type(3){
+    .carousel>input:nth-of-type(3):checked~.captions .caption:nth-of-type(3),
+    .carousel>input:nth-of-type(4):checked~.captions .caption:nth-of-type(4){
         display: flex;
         position: relative;
     }
