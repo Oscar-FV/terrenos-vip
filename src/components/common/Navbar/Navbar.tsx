@@ -3,6 +3,7 @@ import useOnClickOutside from "../../../hooks/useOnClickOutside";
 import Button from "../Button/Button";
 import Hamburger from "hamburger-react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navRef = useRef(null);
@@ -31,7 +32,7 @@ const Navbar = () => {
         className="fixed top-0 z-50 w-full border-gray-200 bg-white shadow-sm md:px-12 lg:py-2"
       >
         <div className="flex flex-wrap items-center justify-between px-4 py-4 lg:p-4">
-          <a href="" className="flex items-center space-x-3 pl-4">
+          <Link to="/" className="flex items-center space-x-3 pl-4">
             <img
               src="/images/logo.webp"
               className="h-8"
@@ -40,7 +41,7 @@ const Navbar = () => {
             <span className="whitespace-nowrap text-xl font-semibold text-accent sm:text-3xl md:h-7">
               TERRENOS <span className="text-primary">VIP</span>
             </span>
-          </a>
+          </Link>
           <span className="lg:hidden">
             <Hamburger
               toggled={isOpen}
@@ -52,20 +53,20 @@ const Navbar = () => {
           <div className="hidden w-full md:w-auto lg:block" id="navbar-default">
             <ul className="mt-4 flex flex-col items-center rounded-lg border border-gray-100 bg-gray-50 text-lg md:mt-0 md:flex-row md:space-x-6 md:border-0 md:bg-white md:p-0">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/sedes"
                   className="navItem block rounded px-3 text-secondary md:border-0 md:p-0"
                 >
                   Sedes
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/informacion"
                   className="navItem block rounded px-3 text-secondary md:border-0 md:p-0"
                 >
                   Información
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -76,7 +77,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <Button text="¡Contáctanos!" goto="#contact-info"/>
+                <Button text="¡Contáctanos!" goto="#contact-info" />
               </li>
             </ul>
           </div>
@@ -88,9 +89,12 @@ const Navbar = () => {
           >
             <ul className="flex flex-col items-center gap-y-3 pb-5 text-lg">
               <li>
-                <a href="#" className="block px-3 text-secondary">
+                <Link
+                  to="/sedes"
+                  className="navItem block rounded px-3 text-secondary md:border-0 md:p-0"
+                >
                   Sedes
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="block px-3 text-secondary">
@@ -98,12 +102,15 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="block px-3 text-secondary">
+                <Link
+                  to="/informacion"
+                  className="navItem block rounded px-3 text-secondary md:border-0 md:p-0"
+                >
                   Información
-                </a>
+                </Link>
               </li>
               <li>
-                <Button text="¡Contáctanos!" goto="#contact-info"/>
+                <Button text="¡Contáctanos!" goto="#contact-info" />
               </li>
             </ul>
           </div>

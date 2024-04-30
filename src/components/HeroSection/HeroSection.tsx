@@ -4,6 +4,7 @@ import Container from "../common/Container/Container";
 import Grid from "../common/Grid/Grid";
 
 import "./HeroSection.css";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 interface Props {
   color: string;

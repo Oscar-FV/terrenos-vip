@@ -8,6 +8,7 @@ import {
 import LandingPage from './routes/Landing.tsx';
 import Root from './routes/root.tsx';
 import ErrorPage from './routes/ErrorPage.tsx';
+import Venues from './routes/Venues.tsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <LandingPage/>
+      },
+      {
+        path: "/sedes",
+        element: <Venues/>
+      },
+      {
+        path: "/informacion",
+        element: <></>
       }
     ]
   },
