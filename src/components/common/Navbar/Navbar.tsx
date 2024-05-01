@@ -29,7 +29,7 @@ const Navbar = () => {
     <>
       <nav
         ref={navRef}
-        className="fixed top-0 z-50 w-full border-gray-200 bg-white shadow-sm md:px-12 lg:py-2"
+        className="fixed top-0 z-50 w-full border-gray-200 bg-[#F9FEFF] shadow-sm md:px-12 lg:py-2"
       >
         <div className="flex flex-wrap items-center justify-between px-4 py-4 lg:p-4">
           <Link to="/" className="flex items-center space-x-3 pl-4">

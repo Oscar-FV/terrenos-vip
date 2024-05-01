@@ -1,53 +1,25 @@
 import Container from "../common/Container/Container";
+import VenueItem from "./VenueItem";
 
 const VenueListing = () => {
   return (
     <>
       <Container
-        className=" mt-28 grid grid-cols-2 items-end gap-x-4 md:px-16 xl:p-0"
-        height="h-[100vh]"
+        className=" mt-28 grid grid-cols-2 gap-x-4 md:px-16 xl:p-0 mb-10"
+        height="h-screen"
       >
-        <article className="flex h-screen w-full">
-          <div className="h-auto overflow-y-scroll">
-            <div className="mb-4 flex flex-col gap-x-4 overflow-hidden rounded-lg p-2 lg:flex-row">
-              <figure className="w-full max-w-[full] lg:max-w-[16rem]">
-                <img
-                  src="/images/aguascalientes.webp"
-                  alt=""
-                  className="aspect-auto h-full w-full rounded-lg"
-                />
-              </figure>
-              <figcaption className="mt-1 text-secondary">
-                <h3 className="font-bold leading-none text-primary md:text-[3cqb]">
-                  Aguascalientes,{" "}
-                  <span className="font-light text-secondary md:text-[2cqb]">
-                    Aguascalientes
-                  </span>
-                </h3>
-                <p className="mt-2">
-                  Invierte en el Bajío, en un estado propicio para disfrutar de
-                  cada día y de sus atractivos. Además, de asegurar mayor
-                  calidad de vida.
-                </p>
-                <p className="mt-3">
-                  Mesualidades Desde{" "}
-                  <strong className="text-primary">$1,915 MXN</strong>
-                </p>
-              </figcaption>
-            </div>
-            <div className="mb-4 flex w-full overflow-hidden rounded-lg bg-primary/10 p-2 shadow-md">
-              <figure className="w-full max-w-[30%]">
-                <img
-                  src="/images/merida.webp"
-                  alt=""
-                  className="aspect-auto rounded-lg"
-                />
-              </figure>
-            </div>
-          </div>
+        <article className="h-auto w-full overflow-y-scroll pr-2">
+            <VenueItem/>
+            <VenueItem/>
+            <VenueItem/>
+            <VenueItem/>
+            <VenueItem/>
+            <VenueItem/>
         </article>
 
-        <figure className="h-full w-full border border-blue-600"></figure>
+        <figure className="h-full w-full border border-blue-600">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d323065.9271595519!2d-102.1960558515789!3d21.885426432680667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a150f1d5ff5d5%3A0xf29d198bed1ac8a!2sCiudad%20Maderas%20Aguascalientes!5e0!3m2!1ses-419!2smx!4v1714520662769!5m2!1ses-419!2smx" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="w-full h-full"></iframe>
+        </figure>
       </Container>
     </>
   );
