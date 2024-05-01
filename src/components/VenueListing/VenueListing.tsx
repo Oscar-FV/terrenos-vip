@@ -1,24 +1,49 @@
+import { useState } from "react";
 import Container from "../common/Container/Container";
 import VenueItem from "./VenueItem";
+import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
+import Location from "../../Models/Location";
 
 const VenueListing = () => {
+  const [position, setPosition] = useState({
+    lat: 21.929509691751438,
+    lng: -102.28782625174749,
+  });
+
+  const testPosition = {
+    lat: 22.161916849058013,
+    lng: -100.97609187755027,
+  };
+  const testPosition2 = {
+    lat: 21.929509691751438,
+    lng: -102.28782625174749,
+  };
+
+  const handleVenueItemClick = (veneuPosition: Location) => {
+    setPosition(veneuPosition);
+  };
+
   return (
     <>
       <Container
-        className=" mt-28 grid grid-cols-2 gap-x-4 md:px-16 xl:p-0 mb-10"
-        height="h-screen"
+        className="mb-10 mt-28 md:grid md:grid-cols-2 flex flex-col md:grid-rows-none md:gap-x-4 md:px-16 px-8 xl:p-0"
+        height="md:h-screen h-fit"
       >
-        <article className="h-auto w-full overflow-y-scroll pr-2">
-            <VenueItem/>
-            <VenueItem/>
-            <VenueItem/>
-            <VenueItem/>
-            <VenueItem/>
-            <VenueItem/>
+        <article className="col-span-2 flex min-h-[28rem] w-full overflow-x-scroll pr-2 md:gap-x-0 gap-x-3 md:col-span-1 md:block md:h-auto md:overflow-y-scroll">
+          <VenueItem location={testPosition2} onClick={handleVenueItemClick} />
+          <VenueItem location={testPosition} onClick={handleVenueItemClick} />
+          <VenueItem location={position} onClick={handleVenueItemClick} />
+          <VenueItem location={position} onClick={handleVenueItemClick} />
+          <VenueItem location={position} onClick={handleVenueItemClick} />
+          <VenueItem location={position} onClick={handleVenueItemClick} />
         </article>
 
-        <figure className="h-full w-full rounded-lg overflow-hidden">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d323065.9271595519!2d-102.1960558515789!3d21.885426432680667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a150f1d5ff5d5%3A0xf29d198bed1ac8a!2sCiudad%20Maderas%20Aguascalientes!5e0!3m2!1ses-419!2smx!4v1714520662769!5m2!1ses-419!2smx" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="w-full h-full"></iframe>
+        <figure className="col-span-2 md:h-full min-h-[20rem] w-full overflow-hidden rounded-lg md:col-span-1  md:mt-0">
+          <APIProvider apiKey={import.meta.env.VITE_GOOGLEMAPS_KEY}>
+            <Map center={position} zoom={15} fullscreenControl={false}>
+              <Marker position={position} />
+            </Map>
+          </APIProvider>
         </figure>
       </Container>
     </>
