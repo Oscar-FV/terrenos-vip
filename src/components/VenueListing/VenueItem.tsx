@@ -1,22 +1,21 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Link } from "react-router-dom";
-import Location from "../../Models/Location";
 
 interface Props {
-  location: Location
-  onClick: (venuePosition: Location) => void
+  city: string
+  isSelected: boolean
+  onClick: (city: string) => void
 }
 
-const VenueItem = ( {location, onClick}: Props ) => {
+const VenueItem = ( {city, isSelected, onClick}: Props ) => {
 
   const handleClick = () => {
-    const venuePosition = location
-    onClick(venuePosition)
+    onClick(city)
   }
 
   return (
     <>
-      <div className="mb-4 flex cursor-pointer sm:min-w-[45%] min-w-[75%] flex-col gap-x-4 overflow-hidden rounded-lg border-b-2 p-4 shadow-md lg:flex-row" onClick={handleClick}>
+      <div className={`mb-4 flex cursor-pointer sm:min-w-[45%] min-w-[75%] flex-col gap-x-4 overflow-hidden rounded-lg border-b-2 p-4 shadow-md lg:flex-row ${isSelected ? "bg-primary/20" : "bg-slate-100"}`} onClick={handleClick}>
         <figure className="h-auto w-full lg:max-w-[16rem]">
           <img
             src="/images/ags-familyclub.jpg"
@@ -26,7 +25,7 @@ const VenueItem = ( {location, onClick}: Props ) => {
         </figure>
         <figcaption className="md:mt-1 mt-3 text-secondary">
           <h3 className="font-bold leading-none text-primary md:text-[3cqb]">
-            Aguascalientes,{" "}
+            {city},{" "}
             <span className="font-light text-secondary md:text-[2cqb]">
               Aguascalientes
             </span>
