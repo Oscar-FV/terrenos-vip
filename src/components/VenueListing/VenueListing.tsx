@@ -1,37 +1,13 @@
-import { useEffect, useState } from "react";
 import Container from "../common/Container/Container";
 import VenueItem from "./VenueItem";
 import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
 import Listing from "../../consts/Listing";
-import { venueListing } from "../../Models/Venue";
-import { useSearchParams } from "react-router-dom";
+import { useVenueSelection } from "../../hooks/useVenueSelection";
+import { useShowMap } from "../../hooks/useShowMap";
 
 const VenueListing = () => {
-  const [selectedVenue, setSelectedVenue] = useState<venueListing>();
-  const [isMapVisible, setIsMapVisible] = useState<boolean>();
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  useEffect(() => {
-    const currentVenue = searchParams.get("sede");
-    if (currentVenue) {
-      setSelectedVenue(Listing.find((venue) => venue.id === currentVenue));
-    }
-  }, [searchParams]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMapVisible(window.matchMedia("(min-width: 768px)").matches);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-  const handleVenueItemClick = (cityID: string) => {
-    setSearchParams(`?sede=${cityID}`);
-  };
+  const {isMapVisible} = useShowMap()
+  const {selectedVenue, handleVenueItemClick} = useVenueSelection()
 
   return (
     <>
