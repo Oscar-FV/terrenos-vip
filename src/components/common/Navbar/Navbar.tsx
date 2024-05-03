@@ -54,7 +54,7 @@ const Navbar = () => {
             <ul className="mt-4 flex flex-col items-center rounded-lg border border-gray-100 bg-gray-50 text-lg md:mt-0 md:flex-row md:space-x-6 md:border-0 md:bg-white md:p-0">
               <li>
                 <Link
-                  to="/sedes"
+                  to="/sedes?sede=mty"
                   className="navItem block rounded px-3 text-secondary md:border-0 md:p-0"
                 >
                   Sedes
@@ -90,7 +90,7 @@ const Navbar = () => {
             <ul className="flex flex-col items-center gap-y-3 pb-5 text-lg">
               <li>
                 <Link
-                  to="/sedes"
+                  to="/sedes?sede=mty"
                   className="navItem block rounded px-3 text-secondary md:border-0 md:p-0"
                 >
                   Sedes

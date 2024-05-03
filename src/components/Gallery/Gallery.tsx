@@ -4,6 +4,7 @@ import "./Gallery.css";
 import Button from "../common/Button/Button";
 import topVenues from "../../consts/TopVenues";
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 interface Props {
   color: string;
@@ -89,10 +90,11 @@ const Gallery = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
 
                   <div className="mt-6 flex gap-x-4">
                     <Button text="Explora El Desarrollo" />
-                    <Button
-                      type="button-secondary"
-                      text="Conoce Nuestas Sedes"
-                    />
+                    <Link  
+                    to={"/sedes?sede=mty"}
+                    className="rounded-lg border-2 border-primary bg-transparent px-3 py-2 text-center text-base text-primary transition-colors duration-200 ease-in-out hover:bg-primary hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 md:text-xl">
+                      Conoce Nuestas Sedes
+                    </Link>
                   </div>
                 </div>
               </figcaption>

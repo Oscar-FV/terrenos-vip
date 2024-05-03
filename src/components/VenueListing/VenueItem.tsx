@@ -1,42 +1,42 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Link } from "react-router-dom";
+import { venueListing } from "../../Models/Venue";
 
 interface Props {
-  city: string
+  venue: venueListing
   isSelected: boolean
   onClick: (city: string) => void
 }
 
-const VenueItem = ( {city, isSelected, onClick}: Props ) => {
+const VenueItem = ( {venue, isSelected, onClick}: Props ) => {
 
   const handleClick = () => {
-    onClick(city)
+    onClick(venue.id)
   }
 
   return (
     <>
-      <div className={`mb-4 flex cursor-pointer sm:min-w-[45%] min-w-[75%] flex-col gap-x-4 overflow-hidden rounded-lg border-b-2 p-4 shadow-md lg:flex-row ${isSelected ? "bg-primary/20" : "bg-slate-100"}`} onClick={handleClick}>
-        <figure className="h-auto w-full lg:max-w-[16rem]">
+      <div className={`mb-4 flex cursor-pointer sm:min-w-[45%] min-w-[90%] flex-col gap-x-4 overflow-hidden rounded-lg border-b-2 p-4 shadow-md lg:flex-row ${isSelected ? "bg-primary/20" : "bg-slate-100"}`} onClick={handleClick}>
+        <figure className="h-auto w-full lg:max-w-[40%]">
           <img
-            src="/images/ags-familyclub.jpg"
+            src={`/images/listing/${venue.id}.webp`}
             alt=""
             className="aspect-auto h-full w-full rounded-lg"
           />
         </figure>
-        <figcaption className="md:mt-1 mt-3 text-secondary">
-          <h3 className="font-bold leading-none text-primary md:text-[3cqb]">
-            {city},{" "}
+        <figcaption className="md:mt-1 mt-3 text-secondary flex flex-col grow lg:max-w-[55%] 2xl:max-w-fit md:grow-0">
+          <h3 className="font-bold leading-none text-primary md:text-[3cqb] uppercase">
+            {venue.city},{" "}
             <span className="font-light text-secondary md:text-[2cqb]">
-              Aguascalientes
+              {venue.estate}
             </span>
           </h3>
-          <p className="mt-2 md:text-[2cqb] text-[1.cqb]">
-            Invierte en el Bajío, en un estado propicio para disfrutar de cada
-            día y de sus atractivos. Además, de asegurar mayor calidad de vida.
+          <p className="mt-2 md:text-[2cqb] text-[1.cqb] grow">
+            {venue.info}
           </p>
-          <p className="mt-3 md:text-[2cqb]">
-            Mesualidades Desde{" "}
-            <strong className="text-primary">$1,915 MXN</strong>
+          <p className="mt-3 md:text-[2cqb] whitespace-break-spaces">
+            Mesualidades Desde
+            <strong className="text-primary">  ${venue.price} MXN</strong>
           </p>
           <div className="mt-4 flex w-full justify-end pr-4 text-primary md:text-[2cqb]">
             <Link
