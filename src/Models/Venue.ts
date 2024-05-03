@@ -16,5 +16,7 @@ export interface topVenue extends Venue {
 export interface venueListing extends Venue {
     info: string,
     price: string,
-    location: Location 
+    location: Location,
+    address: string,
+    linkToMaps: string 
 }
