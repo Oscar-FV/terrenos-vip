@@ -1,6 +1,6 @@
 /* Setting fade transition and default settings */
 body {
-    background-color: #f4f4f4;
+    background-color: #FFFFFF;
     transition: background-color 1s ease, color 1s ease;
     @apply text-white
   }

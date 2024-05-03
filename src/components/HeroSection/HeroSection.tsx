@@ -2,9 +2,7 @@ import { forwardRef } from "react";
 import Button from "../common/Button/Button";
 import Container from "../common/Container/Container";
 import Grid from "../common/Grid/Grid";
-
 import "./HeroSection.css";
-
 interface Props {
   color: string;
   text: string;
@@ -21,10 +19,10 @@ const HeroSection = forwardRef<HTMLDivElement, Props>(
           ref={ref}
           data-color={color}
           data-text={text}
-          className="absolute flex h-full w-full flex-col items-center justify-center overflow-x-hidden p-4 backdrop-brightness-75 md:static md:w-[40vw] md:p-0 md:backdrop-brightness-100"
+          className="absolute z-10 flex h-full w-full flex-col items-center justify-center overflow-x-hidden p-4 md:static md:w-[40vw] md:p-0"
         >
           <div className="flex flex-col items-center justify-center">
-            <h1 className="md:hero-tittle hero-tittle-mobile font-outline-2 md:font-outline-none font-medium text-primary animate-fade-right">
+            <h1 className="md:hero-tittle hero-tittle-mobile font-outline-2 md:font-outline-none animate-fade-right font-medium text-primary">
               Terrenos VIP
             </h1>
             <img
@@ -34,15 +32,19 @@ const HeroSection = forwardRef<HTMLDivElement, Props>(
             />
 
             <div className="mb-5 mt-8 animate-fade animate-delay-500">
-              <p className="font-outline-2 md:font-outline-none text-2xl text-white md:text-secondary xl:text-2xl">
+              <p className="md:font-outline-none text-2xl text-white md:text-secondary xl:text-2xl">
                 Descubre el poder de invertir con Terrenos VIP.
               </p>
-              <p className="font-outline-2 md:font-outline-none text-2xl text-white md:text-secondary xl:text-2xl">
+              <p className="md:font-outline-none text-2xl text-white md:text-secondary xl:text-2xl">
                 Tu elección para un futuro financiero sólido.
               </p>
             </div>
-            <div className="mt-5 flex w-full justify-center md:flex-none md:justify-start animate-fade animate-delay-500">
-              <Button type="button-arrow" text="Conoce Más" goto="#top-venues"/>
+            <div className="mt-5 flex w-full animate-fade justify-center animate-delay-500 md:flex-none md:justify-start">
+              <Button
+                type="button-arrow"
+                text="Conoce Más"
+                goto="#top-venues"
+              />
             </div>
           </div>
         </div>

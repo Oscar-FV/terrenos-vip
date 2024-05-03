@@ -11,7 +11,7 @@ interface Props {
 
 const TimeLine = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
   return (
-    <Container height="" className="mx-8 md:mx-4 lg:mx-0 lg:pt-32  pb-32">
+    <Container height="" className="mx-8 md:mx-4 lg:mx-0 lg:pt-32  pb-32" id="info">
       <div ref={ref} data-color={color} data-text={text} className=" h-full">
         <h2 className="hero-tittle mt-10 font-bold">¿Cómo Funciona?</h2>
         <h3 className="mt-1 text-xl md:text-3xl">

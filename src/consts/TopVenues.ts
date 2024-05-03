@@ -1,14 +1,9 @@
-interface Venue {
-    city: string,
-    estate: string,
-    paragraph1: string,
-    paragraph2: string
-    image: string,
-    ahref: string 
-}
+import { topVenue } from "../Models/Venue"
 
-const topVenues: Venue[] = [
-    {
+
+const topVenues: topVenue[] = [
+    {   
+        id: "meri",
         city: "mérida",
         estate: "yuc",
         paragraph1:"Mérida se ha distinguido no solo por ser una de las ciudades más seguras del país, también lo ha hecho por su crecimiento inmobiliario e industrial.",
@@ -17,6 +12,7 @@ const topVenues: Venue[] = [
         ahref: ""
     },
     {
+        id: "canc",
         city: "cancún",
         estate: "q.roo",
         paragraph1:"Cancún se ha distinguido no solo por ser uno de los destinos turísticos más populares del país, sino también por su crecimiento económico y urbanístico.",
@@ -24,7 +20,8 @@ const topVenues: Venue[] = [
         image: "/images/quintanaroo.webp",
         ahref: ""
     },
-    {
+    {   
+        id: "ags",
         city: "aguascalientes",
         estate: "ags",
         paragraph1:"Aguascalientes ha destacado no solo por ser una de las ciudades más prósperas del país, sino también por su crecimiento económico y cultural.",
@@ -32,7 +29,8 @@ const topVenues: Venue[] = [
         image: "/images/aguascalientes.webp",
         ahref: ""
     },
-    {
+    {   
+        id: "mty",
         city: "monterrey",
         estate: "n.l.",
         paragraph1:"Monterrey, fusiona su dinamismo urbano con un legado histórico notable. Conocida como la " + '"Ciudad de las Montañas."',
