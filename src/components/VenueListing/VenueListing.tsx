@@ -1,13 +1,27 @@
 import Container from "../common/Container/Container";
 import VenueItem from "./VenueItem";
-import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
+import {
+  APIProvider,
+  Map,
+  AdvancedMarker,
+  InfoWindow,
+  useAdvancedMarkerRef,
+} from "@vis.gl/react-google-maps";
 import Listing from "../../consts/Listing";
 import { useVenueSelection } from "../../hooks/useVenueSelection";
 import { useShowMap } from "../../hooks/useShowMap";
+import { useState } from "react";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const VenueListing = () => {
-  const {isMapVisible} = useShowMap()
-  const {selectedVenue, handleVenueItemClick} = useVenueSelection()
+  const { isMapVisible } = useShowMap();
+  const { selectedVenue, handleVenueItemClick } = useVenueSelection();
+  const [markerRef, marker] = useAdvancedMarkerRef();
+  const [InfoWindowShown, setInfoWindowShown] = useState<boolean>(true);
+
+  const handleMarkerClick = () => {
+    setInfoWindowShown(!InfoWindowShown);
+  };
 
   return (
     <>
@@ -35,8 +49,30 @@ const VenueListing = () => {
                 mapTypeControl={false}
                 zoomControl={false}
                 streetViewControl={false}
+                mapId={import.meta.env.VITE_GOOGLEMAP_ID}
+                draggable={false}
               >
-                <Marker position={selectedVenue?.location} />
+                <AdvancedMarker
+                  ref={markerRef}
+                  position={selectedVenue.location}
+                  onClick={handleMarkerClick}
+                >
+                  <Icon
+                    icon="majesticons:map-marker-area-line"
+                    className="h-12 w-12 text-secondary"
+                  />
+                </AdvancedMarker>
+                {InfoWindowShown && (
+                  <InfoWindow
+                    anchor={marker}
+                    onCloseClick={handleMarkerClick}
+                  >
+                    <div className="flex flex-col gap-y-2">
+                      <h3 className="text-secondary font-bold">{selectedVenue.address}</h3>
+                      <a  className="text-primary font-bold text-center underline" href={selectedVenue.linkToMaps}>Ver En Google Maps</a>
+                    </div>
+                  </InfoWindow>
+                )}
               </Map>
             </APIProvider>
           </figure>

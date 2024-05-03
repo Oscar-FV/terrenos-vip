@@ -4,7 +4,7 @@ import { venueListing } from "../Models/Venue";
 import Listing from "../consts/Listing";
 
 export function useVenueSelection() {
-  const [selectedVenue, setSelectedVenue] = useState<venueListing>({} as venueListing);
+  const [selectedVenue, setSelectedVenue] = useState<venueListing>(Listing[0]);
   const [searchParams, setSearchParams] = useSearchParams();
 
   const handleVenueItemClick = (cityID: string) => {
