@@ -5,7 +5,6 @@ import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
 import Listing from "../../consts/Listing";
 import { venueListing } from "../../Models/Venue";
 import { useSearchParams } from "react-router-dom";
-import { isMainThread } from "worker_threads";
 
 const VenueListing = () => {
   const [selectedVenue, setSelectedVenue] = useState<venueListing>();

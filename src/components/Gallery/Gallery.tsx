@@ -4,7 +4,7 @@ import "./Gallery.css";
 import Button from "../common/Button/Button";
 import topVenues from "../../consts/TopVenues";
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface Props {
   color: string;
