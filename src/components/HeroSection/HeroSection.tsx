@@ -2,9 +2,7 @@ import { forwardRef } from "react";
 import Button from "../common/Button/Button";
 import Container from "../common/Container/Container";
 import Grid from "../common/Grid/Grid";
-
 import "./HeroSection.css";
-
 interface Props {
   color: string;
   text: string;

@@ -6,8 +6,8 @@ import { EmailJSResponseStatus } from "@emailjs/browser";
 import Toast from "../common/Toast/Toast";
 
 interface Props {
-  color: string;
-  text: string;
+  color?: string;
+  text?: string;
 }
 
 const ContactUs = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
