@@ -4,13 +4,13 @@ export default interface Venue  {
     id: string,
     city: string,
     estate: string,
+    brochure: string
 }
 
 export interface topVenue extends Venue {
     paragraph1: string,
     paragraph2: string
     image: string,
-    ahref: string 
 }
 
 export interface venueListing extends Venue {
