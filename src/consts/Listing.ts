@@ -11,6 +11,7 @@ const Listing: venueListing[] = [
     address:
       "65577 Paseo del Mirador, N.L.",
     linkToMaps: "https://maps.app.goo.gl/6wjdLPyavvZsUPoQ7",
+    brochure: "https://online.fliphtml5.com/ofhor/bfun/"
   },
   {
     id: "meri",
@@ -20,7 +21,8 @@ const Listing: venueListing[] = [
     price: "2,478",
     location: { lat: 21.161368212191018, lng: -89.80311330249314 },
     address: "97000 Chuburná Puerto, Yuc.",
-    linkToMaps: "https://maps.app.goo.gl/2GLtKGeLwbY9YCgg6"
+    linkToMaps: "https://maps.app.goo.gl/2GLtKGeLwbY9YCgg6",
+    brochure: "https://online.fliphtml5.com/ofhor/wxls/"
   },
   {
     id: "canc",
@@ -30,7 +32,8 @@ const Listing: venueListing[] = [
     price: "2,055",
     location: { lat: 21.726383470565402, lng: -89.64805069784772 },
     address: "Av. Bonampak Supermanzana 4, capilla ecumenica, 77500 Cancún, Q.R.",
-    linkToMaps: "https://maps.app.goo.gl/ao1fjhrhqq8AqjTS7"
+    linkToMaps: "https://maps.app.goo.gl/ao1fjhrhqq8AqjTS7",
+    brochure: "https://online.fliphtml5.com/ofhor/mszg/"
   },
   {
     id: "slp",
@@ -41,6 +44,7 @@ const Listing: venueListing[] = [
     location: { lat: 21.929799585611452, lng: -100.94314447862293 },
     address: "SLP 80D, 79530 San Luis Potosí, S.L.P.",
     linkToMaps: "https://maps.app.goo.gl/BJqvJwosGDLWqw9s9",
+    brochure: ""
   },
   {
     id: "qro",
@@ -51,6 +55,7 @@ const Listing: venueListing[] = [
     location: { lat: 20.629031506684825, lng: -100.53659871772795 },
     address: "38180 Apaseo el Grande, Gto.",
     linkToMaps: "https://maps.app.goo.gl/mRA2sKtKrYh6nYuw5",
+    brochure: "https://online.fliphtml5.com/ofhor/zcvu/"
   },
   {
     id: "ags",
@@ -62,6 +67,7 @@ const Listing: venueListing[] = [
     address:
       "Blvd. A Zacatecas 245-Piso 3, Desarrollo Especial Bulevar a Zacatecas, 20126 Aguascalientes, Ags.",
     linkToMaps: "https://maps.app.goo.gl/11v2rNdzeQih8gNP6",
+    brochure: "https://online.fliphtml5.com/ofhor/dugq/"
   },
 ];
 

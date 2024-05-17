@@ -39,15 +39,15 @@ const VenueItem = ({ venue, isSelected, onClick }: Props) => {
             <strong className="text-primary"> ${venue.price} MXN</strong>
           </p>
           <div className="mt-4 flex w-full justify-end pr-4 text-primary md:text-[2cqb] ">
-            <Link
-              to="/sedes/x"
+            <a
+              href={venue.brochure} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center font-medium hover:underline"
             >
               Explorar Desarrollo
               <span className="ms-2 h-4 w-4">
                 <Icon icon="formkit:arrowright" />
               </span>
-            </Link>
+            </a>
           </div>
         </figcaption>
       </div>
