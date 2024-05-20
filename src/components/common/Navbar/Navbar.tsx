@@ -55,7 +55,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/sedes?sede=mty"
-                  className="navItem block rounded px-3 text-secondary md:border-0 md:p-0"
+                  className="lg:navItem block rounded px-3 text-secondary md:border-0 md:p-0"
                 >
                   Sedes
                 </Link>
@@ -63,7 +63,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/informacion"
-                  className="navItem block rounded px-3 text-secondary md:border-0 md:p-0"
+                  className="lg:navItem block rounded px-3 text-secondary md:border-0 md:p-0"
                 >
                   Información
                 </Link>
@@ -71,7 +71,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="navItem block rounded px-3 text-secondary md:border-0 md:p-0"
+                  className="lg:navItem block rounded px-3 text-secondary md:border-0 md:p-0"
                 >
                   Webinars
                 </a>
@@ -91,7 +91,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/sedes?sede=mty"
-                  className="navItem block rounded px-3 text-secondary md:border-0 md:p-0"
+                  className="lg:navItem block rounded px-3 text-secondary md:border-0 md:p-0"
                 >
                   Sedes
                 </Link>
@@ -104,7 +104,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/informacion"
-                  className="navItem block rounded px-3 text-secondary md:border-0 md:p-0"
+                  className="lg:navItem block rounded px-3 text-secondary md:border-0 md:p-0"
                 >
                   Información
                 </Link>

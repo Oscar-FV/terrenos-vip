@@ -1,7 +1,6 @@
 import { forwardRef } from "react";
 import Container from "../common/Container/Container";
 import "./Gallery.css";
-import Button from "../common/Button/Button";
 import topVenues from "../../consts/TopVenues";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -77,8 +76,8 @@ const Gallery = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
 
           <div className="captions w-full">
             {topVenues.map((venue) => (
-              <figcaption className="caption flex-col" key={"caption-"  + venue.city}>
-                <div className="caption-text md:h-fit">
+              <figcaption className="caption flex-col h-full" key={"caption-"  + venue.city}>
+                <div className="caption-text md:h-fit grow">
                   <p className="">{venue.paragraph1}</p>
                   <p className="mt-4">{venue.paragraph2}</p>
                 </div>
@@ -89,7 +88,7 @@ const Gallery = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
                   </p>
 
                   <div className="mt-6 flex gap-x-4">
-                    <Button text="Explora El Desarrollo" />
+                    <a href={venue.brochure} target="_blank" rel="noopener noreferrer" className="rounded-lg border-2 border-transparent bg-primary px-3 py-2 text-center text-base text-white transition-colors duration-200 ease-in-out hover:bg-secondary focus:outline-none focus:ring-4 focus:ring-blue-300 md:text-xl">Explora El Desarrollo</a>
                     <Link  
                     to={"/sedes?sede=mty"}
                     className="rounded-lg border-2 border-primary bg-transparent px-3 py-2 text-center text-base text-primary transition-colors duration-200 ease-in-out hover:bg-primary hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 md:text-xl">
