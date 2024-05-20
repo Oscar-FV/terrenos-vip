@@ -32,7 +32,7 @@ const ContactUs = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
   }, [isEmailSent]);
 
   return (
-    <article className="md:h-[100vh] sm:h-[110vh] h-[140vh]">
+    <article className="md:h-[100vh] sm:h-[110vh] h-[145vh]">
       <div
         ref={ref}
         data-color={color}
