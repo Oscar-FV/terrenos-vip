@@ -20,6 +20,7 @@ const ContactUs = forwardRef<HTMLDivElement, Props>(({ color, text }, ref) => {
 
   useEffect(() => {
     if (isEmailSent === 200 || isEmailSent === 400) {
+
       setShowSuccessMessage(true);
       const timer = setTimeout(() => {
         setShowSuccessMessage(false);
