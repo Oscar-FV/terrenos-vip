@@ -215,6 +215,7 @@ const ContactForm = ({ emailStatus }: Props) => {
         sitekey={import.meta.env.VITE_GOOGLE_SITE}
         onChange={handleRecaptchaChange}
         className="mb-6"
+        size="normal"
       />
 
       <input
