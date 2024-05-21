@@ -9,6 +9,7 @@ import LandingPage from './routes/Landing.tsx';
 import Root from './routes/root.tsx';
 import ErrorPage from './routes/ErrorPage.tsx';
 import Venues from './routes/Venues.tsx';
+import Info from './routes/Info.tsx';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/informacion",
-        element: <></>
+        element: <Info/>
       }
     ]
   },
