@@ -30,9 +30,10 @@ const Listing: venueListing[] = [
     estate: "q.roo",
     info: "Aquí está tu lugar, en una de las zonas turísticas más importantes en el mundo y en donde podrás disfrutar de todos los beneficios de vivir cerca de la costa.",
     price: "2,055",
-    location: { lat: 21.726383470565402, lng: -89.64805069784772 },
-    address: "Av. Bonampak Supermanzana 4, capilla ecumenica, 77500 Cancún, Q.R.",
-    linkToMaps: "https://maps.app.goo.gl/ao1fjhrhqq8AqjTS7",
+    location: { lat: 21.14799336056715, lng: -87.0896748951232 },
+     
+    address: "Pénjamo, Quintana Roo",
+    linkToMaps: "https://maps.app.goo.gl/nvHbpRXFPBkqLh5P9",
     brochure: "https://online.fliphtml5.com/ofhor/mszg/"
   },
   {
@@ -63,10 +64,11 @@ const Listing: venueListing[] = [
     estate: "ags",
     info: "Invierte en el Bajío, en un estado propicio para disfrutar de cada día y de sus atractivos. Además, de asegurar mayor calidad de vida.",
     price: "1,915",
-    location: { lat: 21.929509691751438, lng: -102.28782625174749 },
+    location: { lat: 21.788469172555263,  lng: -101.99258329999799 },
+    
     address:
-      "Blvd. A Zacatecas 245-Piso 3, Desarrollo Especial Bulevar a Zacatecas, 20126 Aguascalientes, Ags.",
-    linkToMaps: "https://maps.app.goo.gl/11v2rNdzeQih8gNP6",
+      "Lagos de Moreno, Jal.",
+    linkToMaps: "https://maps.app.goo.gl/Mfoi4937jHijhGbv5",
     brochure: "https://online.fliphtml5.com/ofhor/dugq/"
   },
 ];
