@@ -4,7 +4,7 @@ export default function Venues() {
   return (
     <>
       <VenueListing />
-      <ContactUs />
+      <ContactUs/>
     </>
   );
 }

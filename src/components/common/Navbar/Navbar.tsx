@@ -15,6 +15,10 @@ const Navbar = () => {
     }
   });
 
+  const handleLinkClick = () => {
+    setOpen(!isOpen)
+  }
+
   useEffect(() => {
     const menu = document.getElementById("mobile-menu");
     if (menu)
@@ -69,14 +73,6 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="lg:navItem block rounded px-3 text-secondary md:border-0 md:p-0"
-                >
-                  Webinars
-                </a>
-              </li>
-              <li>
                 <Button text="¡Contáctanos!" goto="#contact-info" />
               </li>
             </ul>
@@ -92,25 +88,22 @@ const Navbar = () => {
                 <Link
                   to="/sedes?sede=mty"
                   className="lg:navItem block rounded px-3 text-secondary md:border-0 md:p-0"
+                  onClick={handleLinkClick}
                 >
                   Sedes
                 </Link>
               </li>
               <li>
-                <a href="#" className="block px-3 text-secondary">
-                  Webinars
-                </a>
-              </li>
-              <li>
                 <Link
                   to="/informacion"
                   className="lg:navItem block rounded px-3 text-secondary md:border-0 md:p-0"
+                  onClick={() => { setOpen(!isOpen) }}
                 >
                   Información
                 </Link>
               </li>
-              <li>
-                <Button text="¡Contáctanos!" goto="#contact-info" />
+              <li onClick={() => { setOpen(!isOpen) }}>
+                <Button  text="¡Contáctanos!" goto="#contact-info" />
               </li>
             </ul>
           </div>
